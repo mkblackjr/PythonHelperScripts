@@ -84,8 +84,18 @@ class Queue_Thread_Practice():
  
 if __name__ == '__main__':
     # main_function()
-    q = Queue_Thread_Practice()
-    q.on_start()
+    # q = Queue_Thread_Practice()
+    # q.on_start()
+    import numpy as np
+    x = queue.Queue()
+    target = [1,2,3]
+    target.append(True)
+    x.put(target)
+    x.put([4,5,6])
+    y = [np.array(x.get())]
+    print(y)
+    print(y[0][0])
+    print(x.queue[0])
 
     # example = ThreadingExample()
     # time.sleep(3)
